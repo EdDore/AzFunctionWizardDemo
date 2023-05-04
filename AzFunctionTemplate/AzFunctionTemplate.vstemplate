@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>Custom Azure Function Template</Name>
+    <Description>Creates a custom Azure Function App project</Description>
+    <Icon>AzFunctionTemplate.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <LanguageTag>CSharp</LanguageTag>
+    <PlatformTag>Azure</PlatformTag>
+    <ProjectTypeTag>Cloud</ProjectTypeTag>
+    <SortOrder>1</SortOrder>
+    <TemplateID>2ef4c3c4-41e8-4ff8-ae4e-1070af013143</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>MyFunctionApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="MyFunctionApp.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true">MyFunction.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false">.gitignore</ProjectItem>
+      <ProjectItem ReplaceParameters="false">host.json</ProjectItem>
+      <ProjectItem ReplaceParameters="false">local.settings.json</ProjectItem>
+      <ProjectItem>Properties\launchSettings.json</ProjectItem>
+      <ProjectItem>Properties\serviceDependencies.json</ProjectItem>
+      <ProjectItem>Properties\serviceDependencies.local.json</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>AzFunctionWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e3badb837a253270</Assembly>
+    <FullClassName>AzFunctionWizard.Wizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>
